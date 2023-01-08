@@ -22,3 +22,4 @@ const even_or_odd = (n) => (n % 2 ? 'Odd' : 'Even');
 var even_or_odd = (n) => (n & 1 ? 'Odd' : 'Even');
 const even_or_odd = n => ["Even","Odd"][n&1] ;
 //" [n&1] " в этом случае, если n == четное, оно будет оцениваться как [0], если n == нечетное будет оцениваться [1]
+le
