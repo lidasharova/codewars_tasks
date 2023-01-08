@@ -21,18 +21,25 @@ function fakeBin(x) {
   }
   return String(arr).replace(/,/g, '');
 
-//или
- return x
-   .split('')
-   .map((n) => (n < 5 ? 0 : 1))
-   .join('');
+  //или
+  return x
+    .split('')
+    .map((n) => (n < 5 ? 0 : 1))
+    .join('');
 
   return x.replace(/\d/g, (d) => (d < 5 ? 0 : 1));
- return x.split('').map(n => n < 5 ? 0 : 1).join('');
- return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
- return x.replace(/[1234]/g, '0').replace(/[56789]/g, '1');
- return x.replace(/\d/g, (n) => '0000011111'[n]);
- fakeBin = (x) => [...x].map((a) => (+a < 5 ? 0 : 1)).join('');
+  return x
+    .split('')
+    .map((n) => (n < 5 ? 0 : 1))
+    .join('');
+  return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
+  return x.replace(/[1234]/g, '0').replace(/[56789]/g, '1');
+  return x.replace(/\d/g, (n) => '0000011111'[n]);
+  fakeBin = (x) => [...x].map((a) => (+a < 5 ? 0 : 1)).join('');
+  return x
+    .split('')
+    .map((x) => (x < 5 ? 0 : 1))
+    .join('');
 }
 
 function fakeBin(x) {
