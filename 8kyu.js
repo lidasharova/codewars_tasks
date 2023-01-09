@@ -56,5 +56,20 @@ const noSpace = (x) => String(x).replace(/ /g, '');
 const noSpace = (x) => x.split(' ').join('');
 
 
+//task
+//This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+const simpleMultiplication = (number) =>
+number % 2 === 0 ? number * 8 : number * 9;
+const simpleMultiplication = (n) => n * (n % 2 ? 9 : 8);
+const simpleMultiplication = (number) => (8 + (number % 2)) * number;
+
+//task
+//Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+const solution = (str, ending) => str.endsWith(ending);
+str.substr(str.length - ending.length, ending.length) == ending;
+
+//task
+//Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+const repeatStr = (n, s) => s.repeat(n);
 
 
