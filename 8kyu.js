@@ -120,8 +120,6 @@ switchItUp = (n) =>
     'Nine',
   ][n];
 
-
-
 //task
 //Создайте функцию finalGrade, которая вычисляет итоговую оценку студента в зависимости от двух параметров: оценки за экзамен и количества выполненных проектов.
 //Эта функция должна принимать два аргумента: exam - оценка за экзамен (от 0 до 100); проекты - количество завершенных проектов (от 0 и выше);
@@ -158,7 +156,6 @@ function finalGrade(exam, projects) {
   }
 }
 
-
 //task
 //Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
 //For example, when the input is green, output should be yellow.
@@ -167,15 +164,15 @@ function updateLight(current) {
   let color = current;
   switch (color) {
     case 'green':
-color = 'yellow';
+      color = 'yellow';
       return color;
       break;
     case 'yellow':
-color = 'red';
+      color = 'red';
       return color;
       break;
     case 'red':
-    color = 'green';
+      color = 'green';
       return color;
       break;
   }
@@ -196,9 +193,57 @@ const updateLight = (current) =>
     red: 'green',
   }[current]);
 
-
 //task
 //You are given two interior angles (in degrees) of a triangle.
 //Write a function to return the 3rd.
 
 const otherAngle = (a, b) => 180 - (a + b);
+
+//task
+//Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+//Write a code that gives out the total amount for different days(d).
+
+function baseCost(days, rate) {
+  return days * rate;
+}
+
+function discountRate(days) {
+  if (days >= 7) {
+    return 50;
+  } else if (days >= 3) {
+    return 20;
+  } else {
+    return 0;
+  }
+}
+
+//2
+function rentalCarCost(days) {
+  return baseCost(days, 40) - discountRate(days);
+}
+
+//3
+function rentalCarCost(days) {
+  var dayCost = 40;
+
+  var discount = 0;
+  if (days >= 3) discount += 20;
+  if (days >= 7) discount += 30;
+
+  return dayCost * days - discount;
+}
+
+//my
+function rentalCarCost(d) {
+  if (d >= 7) {
+    return 40 * d - 50;
+  }
+  if (d < 7 && d >= 3) {
+    return 40 * d - 20;
+  } else {
+    return d * 40;
+  }
+}
+
+const rentalCarCost = (d) => d * 40 - (d > 6 ? 50 : d > 2 ? 20 : 0);
+const rentalCarCost = (d) => d * 40 - (d >= 7 ? 50 : d >= 3 ? 20 : 0);
