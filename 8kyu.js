@@ -128,32 +128,28 @@ switchItUp = (n) =>
 // 90, если оценка за экзамен выше 75 и количество выполненных проектов не менее 5.
 // 75, если оценка за экзамен больше 50 и количество выполненных проектов не менее 2.
 // 0, в остальных случаях
-
 function finalGrade(exam, projects) {
-  if (exam >= 90 && projects >= 10) {
+  if (exam > 90 || projects > 10) {
     return 100;
   }
-  if (exam >= 75 && projects >= 5) {
+
+  if (exam > 75 && projects >= 5) {
     return 90;
   }
-  if (exam >= 50 && projects >= 2) {
+
+  if (exam > 50 && projects >= 2) {
     return 75;
   } else {
-    (' incorrect number');
+    return 0;
   }
 }
 
-//2 вариант
+//2
 function finalGrade(exam, projects) {
-  if (exam + projects >= 100) {
-    return 100;
-  }
-  if (exam + projects >= 80) {
-    return 90;
-  }
-  if (exam + projects >= 52) {
-    return 75;
-  }
+  if (exam > 90 || projects > 10) return 100;
+  if ((exam > 75) & (projects >= 5)) return 90;
+  if ((exam > 50) & (projects >= 2)) return 75;
+  return 0;
 }
 
 //task
