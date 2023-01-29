@@ -30,3 +30,22 @@ function nbDig(n, d) {
   }
   return count;
 }
+
+
+
+//task
+//Напишите функцию, которая возвращает только десятичную часть заданного числа.
+//Вам нужно обрабатывать только действительные числа, а не Infinity, NaNили подобные. Всегда возвращайте положительную десятичную часть.
+
+function getDecimal(n) {
+  let res;
+
+  if (n > 0) {
+    res = n - Math.floor(n);
+  } else {
+    let a = -Math.ceil(n);
+    res = -(n + a);
+  }
+
+  return res;
+}
