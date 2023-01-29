@@ -36,7 +36,6 @@ const combine = (...params) =>
   }, {});
 
 
-  
   //3 option
   function combine() {
     var obj = {};
