@@ -46,6 +46,10 @@ function getDecimal(n) {
     let a = -Math.ceil(n);
     res = -(n + a);
   }
-
   return res;
+}
+
+//2option
+function getDecimal(n) {
+  return Math.abs(n % 1);
 }
